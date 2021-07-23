@@ -177,15 +177,12 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+# bar {
+#         status_command i3status
+# }
 
 # scrot & gimp - root
-bindsym Print exec scrot -e 'xclip -selection c -t image/png $f && rm $f'
-# # scrot & gimp - select window or rectangle
-#bindsym $mod+Print exec scrot -e 'xclip -selection c -t image/png $f && rm $f'
-bindsym Shift+Print exec scrot -s -e 'xclip -selection c -t image/png $f && rm $f'
+bindsym Print exec "sleep 0.1 && import png:- | xclip -selection clipboard -t image/png" 
 bindsym $mod+Shift+l exec i3lock
 
 default_border none
@@ -199,7 +196,10 @@ gaps outer 10
 
 border_radius 10
 for_window [class="Spotify"] move container to workspace 2
-# exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# Launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindcode 174 exec playerctl pause
 #Pauze the play
