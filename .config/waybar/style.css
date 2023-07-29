@@ -1,0 +1,128 @@
+@import "mocha.css";
+
+/* Basic styling  */
+
+* {
+  font-family: "FantasqueSansMono Nerd Font";
+  font-size: 13px;
+	transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
+}
+
+window#waybar {
+	background: transparent;
+}
+
+#cpu,
+#memory,
+#keyboard-state,
+#mpris,
+#tray,
+#network,
+#clock,
+#temperature,
+#pulseaudio,
+#workspaces {
+  color: @pink;
+  background-color: @surface0;
+  margin: 7px 0px;
+  padding: 0px 5px 0px 7px;
+	min-height: 30px;
+}
+
+/* Left witgets */ 
+
+button {
+	border: none;
+}
+
+button:hover {
+	background: inherit;
+	box-shadow: none;
+	text-shadow: inherit;
+}
+
+#workspaces {
+	margin: 7px 0 7px 20px;
+	border-radius: 1rem;
+}
+
+#workspaces button {
+	color: @pink;
+  border-radius: 1rem;
+  padding-left: 6px;
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  color: @flamingo;
+}
+
+#workspaces button:hover {
+  color: @rosewater;
+}
+
+
+/* Middle widgets */
+
+#mpris {
+	border-radius: 1rem;
+	color: @flamingo;	
+	padding: 0px 20px;
+}
+
+
+/* Right widgets */
+
+.modules-right {
+	margin-right: 20px;
+}
+
+#clock {
+	border-radius: 1rem;
+	margin-right: 7px;
+  color: @lavender;
+	padding: 0 10px;
+}
+
+#pulseaudio {
+  color: @pink;
+	border-radius: 1rem 0 0 1rem;
+	padding: 0 5px 0 15px;
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+#network {
+	padding-right: 10px;
+}
+
+#memory {
+	padding-right: 10px;
+}
+
+#temperature {
+	padding-right: 5px;
+}
+
+#keyboard-state {
+	padding-right: 20px;
+	border-radius: 0px 1rem 1rem 0px;
+}
+
+#tray {
+  margin-left: 7px;
+	border-radius: 1rem;
+	padding: 0px 10px;
+}
+
+tooltip {
+    background: @base;
+    border: 1px solid @pink;
+}
+
+tooltip label {
+    color: @text;
+}
+
