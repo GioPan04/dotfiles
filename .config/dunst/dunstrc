@@ -1,4 +1,5 @@
 [global]
+corner_radius = 5
 frame_color = "#1E66F5"
 separator_color= frame
 
