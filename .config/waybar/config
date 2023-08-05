@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["mpris"],
-    "modules-right": ["clock","pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "tray"],
+    "modules-right": ["clock","pulseaudio", "network", "cpu", "memory", "temperature", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -15,22 +15,14 @@
             "default": ""
         }
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": false,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
 	"interval": 5,
-	"format": "{:%H:%M:%S}",
+	// TO BE UPDATED WHEN THIS SHIPS https://github.com/Alexays/Waybar/pull/2345
+	"format": "{:%H:%M:%OS}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -43,7 +35,7 @@
     },
     "temperature": {
         // "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C   {icon}",
         "format": "{temperatureC}°C  {icon}",

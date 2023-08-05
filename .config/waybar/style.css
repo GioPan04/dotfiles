@@ -3,8 +3,7 @@
 /* Basic styling  */
 
 * {
-  font-family: "FantasqueSansMono Nerd Font";
-  font-size: 13px;
+	font-size: 13px;
 	transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
 }
 
@@ -103,26 +102,22 @@ button:hover {
 }
 
 #temperature {
-	padding-right: 5px;
-}
-
-#keyboard-state {
-	padding-right: 20px;
+	padding-right: 15px;
 	border-radius: 0px 1rem 1rem 0px;
 }
 
 #tray {
-  margin-left: 7px;
+	margin-left: 7px;
 	border-radius: 1rem;
 	padding: 0px 10px;
 }
 
 tooltip {
-    background: @base;
-    border: 1px solid @pink;
+	background: @base;
+	border: 1px solid @pink;
 }
 
 tooltip label {
-    color: @text;
+	color: @text;
 }
 
