@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["mpris"],
-    "modules-right": ["clock","pulseaudio", "network", "cpu", "memory", "temperature", "tray"],
+    "modules-right": ["clock","pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -14,6 +14,17 @@
             "active": "",
             "default": ""
         }
+    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
     },
     "tray": {
         // "icon-size": 21,

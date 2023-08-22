@@ -20,6 +20,7 @@ window#waybar {
 #clock,
 #temperature,
 #pulseaudio,
+#battery,
 #workspaces {
   color: @pink;
   background-color: @surface0;
@@ -93,16 +94,14 @@ button:hover {
     color: @red;
 }
 
-#network {
-	padding-right: 10px;
-}
-
-#memory {
-	padding-right: 10px;
-}
-
+#network,
+#memory,
 #temperature {
-	padding-right: 15px;
+	padding-right: 10px;
+}
+
+#battery {
+	padding-right: 20px;
 	border-radius: 0px 1rem 1rem 0px;
 }
 
